@@ -1,0 +1,27 @@
+
+  public int maxMirror(int[] nums) {
+    
+    int max=0;
+
+ for(int start=0;start<nums.length;start++){
+
+   
+   for(int beginn=nums.length-1;beginn>=0;beginn--){
+     
+     int size=0;
+     int i=start;
+     int j=beginn;
+     
+     while( i < nums.length && j >= 0 && nums[i] == nums[j] ){
+              size++;
+              i++;
+              j--;
+              
+ }
+        if(size>max){
+     max=size;
+   }
+       }
+      }
+    return max;
+}
