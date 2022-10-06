@@ -1,0 +1,39 @@
+public int scoresAverage(int[] scores) {
+
+  
+  int average1=0;
+  int average2=0;
+  
+  average1=average(scores,0,(scores.length/2)-1);
+  
+  average2=average(scores,scores.length/2,scores.length-1);
+
+if(average1>average2){
+  return average1;
+}
+  
+
+return average2;
+}
+
+
+public int average(int [] scores, int start,int end){
+  int sum=0;
+  int average=0;
+  
+    int half=scores.length/2;
+
+  
+  for(int i=start;i<=end;i++)
+    
+    sum+=scores[i];
+  
+  
+  
+ average=sum/half;
+ 
+ return average;
+}
+
+
+
