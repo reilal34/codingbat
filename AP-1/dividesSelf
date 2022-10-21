@@ -1,0 +1,22 @@
+public boolean dividesSelf(int n) {
+  
+
+int integer=n;
+int digits=n;
+
+
+while(digits>0){
+  
+  int divisor=digits%10;
+  
+  if(divisor!=0 && integer%divisor==0){
+    
+    digits=digits/10;
+    
+  }else{
+    return false;
+  }
+
+}
+return true;
+}
