@@ -1,0 +1,32 @@
+public String[] mergeTwo(String[] a, String[] b, int n) {
+  
+   String [] newArr=new String [n];
+   
+   int bCounter=0;
+   int aCounter=0;
+   
+   int newCounter=0;
+  
+  while(newCounter< n){
+    
+    int compare = a[aCounter].compareTo(b[bCounter]);  
+
+if (compare < 0) {  
+    newArr[newCounter]=a[aCounter];
+    newCounter++;
+    aCounter++;
+}
+else if (compare > 0) {
+    newArr[newCounter]=b[bCounter]; 
+    newCounter++;
+    bCounter++;
+}
+else {  
+    newArr[newCounter]=a[aCounter];
+    newCounter++;
+    aCounter++;
+    bCounter++;
+} 
+}
+return newArr;
+}
