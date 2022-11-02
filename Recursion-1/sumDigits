@@ -1,0 +1,11 @@
+public int sumDigits(int n) {
+  
+  int sum=0;
+  
+    if (n == 0) return 0;
+
+sum=sum+n%10;
+
+
+return sum+sumDigits(n/10);
+}
