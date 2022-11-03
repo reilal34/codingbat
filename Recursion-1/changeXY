@@ -1,0 +1,20 @@
+public String changeXY(String str) {
+  
+ if(str.equals("")){
+   
+   return "";
+   
+ }else{
+   
+   char leftMost=str.charAt(0);
+   str=str.substring(1);
+   
+   if(leftMost=='x'){
+    return 'y'+changeXY(str);
+   }else{
+     
+     return leftMost+changeXY(str);
+   }
+ }
+  
+}
