@@ -7,8 +7,6 @@ public String changePi(String str) {
  
  else {
    
-   String piStr=str.substring(0,2);
-
    if(str.substring(0,2).equals("pi")){
     return "3.14"+changePi(str.substring(2));
     
