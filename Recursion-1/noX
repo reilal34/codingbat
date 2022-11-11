@@ -1,0 +1,19 @@
+public String noX(String str) {
+  
+  if(str.equals("")){
+   
+   return "";
+   
+ }else{
+   
+   char leftMost=str.charAt(0);
+   str=str.substring(1);
+   
+   if(leftMost=='x'){
+    return noX(str);
+   }else{
+     
+     return leftMost+noX(str);
+   }
+ }
+}
