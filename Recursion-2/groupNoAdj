@@ -1,0 +1,23 @@
+public boolean groupNoAdj(int start, int[] nums, int target) {
+  
+  if(target==0){
+    return true;
+  }
+  
+  if(start>=nums.length || target<0){
+  return false;
+  }
+  
+
+  boolean picked=groupNoAdj(start+1,nums,target-nums[start]);
+  
+  boolean notPicked= groupNoAdj(start+1,nums,target);
+  
+   if(picked){
+   
+   picked=groupNoAdj(start+2,nums,target-nums[start]);
+ }
+  
+  return picked || notPicked;
+}
+
