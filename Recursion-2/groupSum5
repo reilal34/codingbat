@@ -1,0 +1,30 @@
+public boolean groupSum5(int start, int[] nums, int target) {
+  
+
+   if(start==nums.length){
+    return (target==0);
+  }
+  
+ 
+  boolean picked=groupSum5(start+1,nums,target-nums[start]);
+  
+  boolean notPicked= groupSum5(start+1,nums,target);
+  
+   if(nums[start]%5==0){
+   
+   return picked;
+ }
+ 
+ if(start>0 && nums[start]==1){
+ 
+ if(nums[start-1]==5){
+   
+   return notPicked;
+ }
+ }
+  
+  return picked || notPicked;
+}
+
+
+
