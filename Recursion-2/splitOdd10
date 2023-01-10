@@ -1,0 +1,38 @@
+public boolean splitOdd10(int[] nums) {
+  
+
+  
+  int sum1=0;
+  int sum2=0;
+  int index=0;
+  
+  return helper(0,nums,0,0);
+ 
+}
+
+
+public boolean helper (int index,int [] nums,int sum1,int sum2){
+  
+   
+  
+  if(index>=nums.length){
+    
+  return (sum1%2==1 && sum2%10==0) || (sum1%10==0 && sum2%2==1);
+  
+  }
+  
+  int value=nums[index];
+  
+
+  boolean pickedSum1=helper(index+1,nums,sum1+value,sum2);
+  
+  boolean pickedSum2= helper(index+1,nums,sum1,sum2+value);
+  
+   
+  
+  return pickedSum1 || pickedSum2;
+
+}
+
+
+
